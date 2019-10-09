@@ -1,0 +1,725 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\begin_preamble
+\usepackage{draftwatermark}
+\end_preamble
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_author "Luis Javier González Caballero"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\notefontcolor #0000ff
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\listings_params "showtabs={true;}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetWatermarkText{Proposal}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename cover page.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Tiddlywiki
+\end_layout
+
+\begin_layout Title
+Advanced Customization
+\end_layout
+
+\begin_layout Author
+Luis Javier González Caballero
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Section
+What is tiddlywiki
+\end_layout
+
+\begin_layout Standard
+In this section we will talk about:
+\end_layout
+
+\begin_layout Itemize
+TW description.
+\end_layout
+
+\begin_layout Itemize
+TW philosophy.
+\end_layout
+
+\begin_layout Itemize
+TW as a single page application.
+\end_layout
+
+\begin_layout Itemize
+What are tiddlers.
+\end_layout
+
+\begin_layout Section
+Starting with tiddlywiki
+\end_layout
+
+\begin_layout Standard
+In this section we will talk about:
+\end_layout
+
+\begin_layout Itemize
+Where we can find tiddlywiki.
+\end_layout
+
+\begin_layout Itemize
+How to download and a basic usage.
+\end_layout
+
+\begin_layout Itemize
+Tagging tiddlers.
+\end_layout
+
+\begin_layout Itemize
+Transclusion and filters.
+\end_layout
+
+\begin_layout Section
+Reasons to use tiddlywiki
+\end_layout
+
+\begin_layout Standard
+In this section we will talk about:
+\end_layout
+
+\begin_layout Itemize
+TW as a way of organizing notes.
+\end_layout
+
+\begin_layout Itemize
+TW as a toolbox.
+\end_layout
+
+\begin_layout Itemize
+Basic uses of TW.
+\end_layout
+
+\begin_layout Itemize
+The TW community.
+\end_layout
+
+\begin_layout Section
+Elements of TW
+\end_layout
+
+\begin_layout Subsection
+Tiddlers
+\end_layout
+
+\begin_layout Subsection
+Wikitext
+\end_layout
+
+\begin_layout Subsection
+Tags
+\end_layout
+
+\begin_layout Subsection
+Fields
+\end_layout
+
+\begin_layout Standard
+Main fields (icon, color, data-uri...) and its use.
+\end_layout
+
+\begin_layout Subsection
+Transclusion
+\end_layout
+
+\begin_layout Subsection
+Filters
+\end_layout
+
+\begin_layout Subsection
+Code: macros and widgets
+\end_layout
+
+\begin_layout Subsection
+Mechanism
+\end_layout
+
+\begin_layout Chapter
+Components of the tiddlywiki screen
+\end_layout
+
+\begin_layout Standard
+In this section we will describe all components of TW.
+ We introduce tags as a way of build the tw screen.
+\end_layout
+
+\begin_layout Section
+The TW whole screen
+\end_layout
+
+\begin_layout Section
+The right and left topbars
+\end_layout
+
+\begin_layout Section
+The right sidebars
+\end_layout
+
+\begin_layout Subsection
+The title
+\end_layout
+
+\begin_layout Subsection
+The subtitle
+\end_layout
+
+\begin_layout Subsection
+The buttons
+\end_layout
+
+\begin_layout Subsection
+The search bar
+\end_layout
+
+\begin_layout Subsection
+The tabs
+\end_layout
+
+\begin_layout Subsection
+Alerts
+\end_layout
+
+\begin_layout Section
+The Story river
+\end_layout
+
+\begin_layout Section
+Templates
+\end_layout
+
+\begin_layout Standard
+Describe what are templates and how TW use them.
+\end_layout
+
+\begin_layout Chapter
+Loading tiddlywiki in the browser
+\end_layout
+
+\begin_layout Standard
+In this section we describe the loading of TW simplified for a non-programmer
+ to understand: from the fist javascript function to the last rendering
+ wikitext to html page elements.
+\end_layout
+
+\begin_layout Section
+Architecture
+\end_layout
+
+\begin_layout Enumerate
+The microkernel
+\end_layout
+
+\begin_layout Enumerate
+Startup modules
+\end_layout
+
+\begin_layout Enumerate
+Mechanisms
+\end_layout
+
+\begin_layout Enumerate
+The outer layer: transclusion, widgets, wikitext...
+\end_layout
+
+\begin_layout Section
+Loading phases
+\end_layout
+
+\begin_layout Enumerate
+The javascript main function.
+\end_layout
+
+\begin_layout Enumerate
+Creating tiddler objects.
+\end_layout
+
+\begin_layout Enumerate
+Construct the wiki store.
+\end_layout
+
+\begin_layout Enumerate
+Load modules
+\end_layout
+
+\begin_layout Enumerate
+Loading startup tiddlers
+\end_layout
+
+\begin_layout Section
+Tiddlers as Basic Coding Elements
+\end_layout
+
+\begin_layout Section
+Rendering wikitext
+\end_layout
+
+\begin_layout Chapter
+Customize the TW screen
+\end_layout
+
+\begin_layout Section
+Showing and hidding content
+\end_layout
+
+\begin_layout Section
+Templates
+\end_layout
+
+\begin_layout Subsection
+Main system templates
+\end_layout
+
+\begin_layout Standard
+Pagetemplate, Viewtemplate, Edittemplate, Tagtemplate...
+\end_layout
+
+\begin_layout Subsection
+How to create templates
+\end_layout
+
+\begin_layout Section
+Using CSS in TW
+\end_layout
+
+\begin_layout Chapter
+Inside a tiddler
+\end_layout
+
+\begin_layout Section
+Types of tiddlers
+\end_layout
+
+\begin_layout Standard
+Wikitext tiddlers, CSS tiddlers, Alert tiddler, Data tiddlers, Macro tiddlers,
+ Tag tiddlers, ...
+\end_layout
+
+\begin_layout Section
+Normal tiddler
+\end_layout
+
+\begin_layout Subsection
+Formatting text
+\end_layout
+
+\begin_layout Subsection
+Linking content
+\end_layout
+
+\begin_layout Subsection
+Basic transclusion
+\end_layout
+
+\begin_layout Subsection
+Showing external content
+\end_layout
+
+\begin_layout Standard
+as mime types (videos, images, pdfs), as html elements (<video controls...,
+ )
+\end_layout
+
+\begin_layout Section
+Adding macros and widgets
+\end_layout
+
+\begin_layout Standard
+Here you can find basic information.
+ Advanced information in later chapters.
+\end_layout
+
+\begin_layout Section
+CSS tiddlers
+\end_layout
+
+\begin_layout Standard
+Customizing the appearance of your wiki with CSS tiddlers.
+\end_layout
+
+\begin_layout Section
+Alert tiddlers
+\end_layout
+
+\begin_layout Section
+Tag tiddlers
+\end_layout
+
+\begin_layout Standard
+A way of ranking tags.
+ A possible use: sidebar index.
+ The color and icon of a tag.
+\end_layout
+
+\begin_layout Section
+Data tiddlers
+\end_layout
+
+\begin_layout Itemize
+JSON and Dictionary tiddlers.
+\end_layout
+
+\begin_layout Itemize
+Refering the data.
+\end_layout
+
+\begin_layout Section
+Macro tiddlers
+\end_layout
+
+\begin_layout Standard
+Wikitext macros and javascript macros.
+\end_layout
+
+\begin_layout Chapter
+The filter notation
+\end_layout
+
+\begin_layout Section
+The filter basic step
+\end_layout
+
+\begin_layout Section
+Using filter operators
+\end_layout
+
+\begin_layout Section
+Combining filter steps
+\end_layout
+
+\begin_layout Itemize
+combining by OR
+\end_layout
+
+\begin_layout Itemize
+combining by AND
+\end_layout
+
+\begin_layout Itemize
+combining by NOT
+\end_layout
+
+\begin_layout Section
+Regular expressions
+\end_layout
+
+\begin_layout Section
+Filter uses
+\end_layout
+
+\begin_layout Section
+Examples
+\end_layout
+
+\begin_layout Chapter
+The behavior of tiddlywiki
+\end_layout
+
+\begin_layout Section
+Creating microcontent
+\end_layout
+
+\begin_layout Section
+Organizing microcontent with links
+\end_layout
+
+\begin_layout Section
+Organizing tiddlers with tags
+\end_layout
+
+\begin_layout Section
+Personalize behavior with macros and widgets
+\end_layout
+
+\begin_layout Chapter
+Macros
+\end_layout
+
+\begin_layout Standard
+Customizing your tiddler functionality with macros.
+\end_layout
+
+\begin_layout Section
+Basic macros included
+\end_layout
+
+\begin_layout Section
+Writting your own macros
+\end_layout
+
+\begin_layout Section
+Using macros
+\end_layout
+
+\begin_layout Chapter
+Widgets
+\end_layout
+
+\begin_layout Standard
+Customizing your tiddler functionality with widgets.
+\end_layout
+
+\begin_layout Section
+Basic widgets included
+\end_layout
+
+\begin_layout Section
+Writting your own widgets
+\end_layout
+
+\begin_layout Standard
+This question is out of the goal of this book.
+ We show how to add javascript code to your tiddler.
+\end_layout
+
+\begin_layout Section
+Using widgets
+\end_layout
+
+\begin_layout Chapter
+The scrippting business
+\end_layout
+
+\begin_layout Standard
+Pieces of code.
+\end_layout
+
+\begin_layout Section
+List scrippting
+\end_layout
+
+\begin_layout Standard
+Lists, nested lists, actions and buttons inside lists...
+\end_layout
+
+\begin_layout Section
+Interface scrippting
+\end_layout
+
+\begin_layout Standard
+How to use buttons, edittext, radiobuttons, checkboxes...
+\end_layout
+
+\begin_layout Section
+Data tiddlers scrippting
+\end_layout
+
+\begin_layout Standard
+How to use data tiddlers.
+\end_layout
+
+\begin_layout Section
+Template scrippting
+\end_layout
+
+\begin_layout Standard
+Revealing sections of tiddlywiki, state tiddlers...
+\end_layout
+
+\begin_layout Section
+Tiddlers scrippting
+\end_layout
+
+\begin_layout Standard
+Creating, removing and editing tiddlers with code, navigating with code...
+\end_layout
+
+\begin_layout Chapter
+Recipe book
+\end_layout
+
+\begin_layout Standard
+In this section we will show master code pieces to various situations.
+ Personal wikis with many uses.
+\end_layout
+
+\begin_layout Standard
+Maybe the sections will be:
+\end_layout
+
+\begin_layout Section
+Personal todo-list
+\end_layout
+
+\begin_layout Section
+Writting stories
+\end_layout
+
+\begin_layout Section
+Image gallery
+\end_layout
+
+\begin_layout Section
+Lesson planner
+\end_layout
+
+\begin_layout Section
+Simple game
+\end_layout
+
+\begin_layout Chapter
+Languages
+\end_layout
+
+\begin_layout Section
+Tiddlywiki languages
+\end_layout
+
+\begin_layout Section
+Writing international wikis
+\end_layout
+
+\begin_layout Chapter
+Plugins
+\end_layout
+
+\begin_layout Section
+Extending tiddlywiki functionality
+\end_layout
+
+\begin_layout Section
+Creating plugins
+\end_layout
+
+\begin_layout Section
+Where we can find plugins
+\end_layout
+
+\begin_layout Chapter
+The people.
+ The project
+\end_layout
+
+\begin_layout Standard
+I want to add a chapter with all the people under this project.
+ From Jeremy though the core developers to the wiki writers.
+\end_layout
+
+\begin_layout Standard
+And the project, its philosophy and the future of tiddlywiki.
+\end_layout
+
+\end_body
+\end_document
