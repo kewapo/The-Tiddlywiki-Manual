@@ -4,13 +4,14 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass book
+\textclass scrbook
 \begin_preamble
-\usepackage{draftwatermark}
+
 \end_preamble
 \use_default_options false
 \begin_modules
 tcolorbox
+customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -37,6 +38,7 @@ tcolorbox
 \paperfontsize 12
 \spacing single
 \use_hyperref true
+\pdf_title "The Tiddlywiki manual"
 \pdf_author "Luis Javier González Caballero"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
@@ -46,9 +48,9 @@ tcolorbox
 \pdf_pdfborder false
 \pdf_colorlinks true
 \pdf_backref false
-\pdf_pdfusetitle false
-\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
-\papersize default
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue, urlcolor=blue, citecolor=blue"
+\papersize a4paper
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -68,7 +70,7 @@ tcolorbox
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \use_minted 0
 \notefontcolor #0000ff
 \index Índice
@@ -79,6 +81,9 @@ tcolorbox
 \topmargin 3cm
 \rightmargin 2cm
 \bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -89,7 +94,7 @@ tcolorbox
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 2
-\paperpagestyle default
+\paperpagestyle fancy
 \listings_params "showtabs={true;}"
 \tracking_changes false
 \output_changes false
@@ -99,22 +104,6 @@ tcolorbox
 \end_header
 
 \begin_body
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-SetWatermarkText{Proposal}
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Standard
 \begin_inset External
@@ -149,7 +138,7 @@ Riz - google groups
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Chapter*
 About the writers
 \end_layout
 
@@ -163,7 +152,7 @@ About the writers
 \begin_layout Standard
 \begin_inset Wrap figure
 lines 0
-placement o
+placement i
 overhang 0in
 width "35col%"
 status collapsed
@@ -230,10 +219,13 @@ kewapo@gmail.com
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
+\begin_inset Newpage clearpage
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -338,7 +330,10 @@ You can add code to your wiki in Macros and Widgets.
 \end_inset
 
 
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
@@ -1171,10 +1166,6 @@ All elements of tiddlywiki fit together through mechanism.
  the navigation history.
  The StartupMechanism runs the installed startup modules at the end of the
  boot process.
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
@@ -1220,7 +1211,7 @@ In the left side appears the tiddlers you open.
 \begin_layout Itemize
 
 \size footnotesize
-In the right side is the title, subtitle, buttons and the menus.
+The right side shows the title, subtitle, buttons and the menus.
 \end_layout
 
 \begin_layout Itemize
@@ -1232,7 +1223,10 @@ Tiddlywiki uses special tiddlers and special tags to configure its appearance.
 \end_inset
 
 
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
