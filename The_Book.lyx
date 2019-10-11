@@ -4,12 +4,14 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass scrbook
+\textclass book
 \begin_preamble
 \usepackage{draftwatermark}
 \end_preamble
-\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table
 \use_default_options false
+\begin_modules
+tcolorbox
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package babel
@@ -47,7 +49,7 @@
 \pdf_pdfusetitle false
 \pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -73,6 +75,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -130,9 +136,104 @@ Advanced Customization
 
 \begin_layout Author
 Luis Javier González Caballero
+\begin_inset Newline newline
+\end_inset
+
+Riz - google groups
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+About the writers
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0in
+width "35col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/Luis.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luis Javier González Caballero is an IT Technitian with extensive experience
+ in user support.
+ He has done some programming works mainly in Python.
+ He is an Industrial Technician Engineer from the 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.unileon.es"
+target "University of León"
+literal "false"
+
+\end_inset
+
+, Spain.
+ and a Computer Engineer from the 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.uned.es"
+target "UNED University"
+literal "false"
+
+\end_inset
+
+ in Spain too.
+\end_layout
+
+\begin_layout Standard
+He is an active person with a great capacity for learning, which he is involved.
+\end_layout
+
+\begin_layout Standard
+Apart from his professional career he collaborates with numerous non-profit
+ organizations and free projects and is an animal lover.
+ He lives in León, a small town in northwestern Spain with his family.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align right
+\begin_inset Graphics
+	filename Images/Logo-correo.jpg
+
+\end_inset
+
+kewapo@gmail.com
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -146,10 +247,161 @@ Introduction
 \end_layout
 
 \begin_layout Section
+Key points
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Tiddlywiki is more than a note-taking application.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It is an advanced way of organizing your information.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+All notes you will add to it are called tiddlers.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+You can download an empty wiki from its web site.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It is portable and multi platform.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+To add format to your text inside the tiddlers you use format characters:
+ //text// for italics, __text__ for underline, [[Tiddler]] for links etc.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It use tags to organize, classify etc the tiddlers.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It use fields to add extra information to the tiddlers.
+ For example the created date field, the modified date field etc.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+You can include the information of a tiddler inside other tiddler without
+ writing twice.
+ This is called Transclusion.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Tiddlywiki uses Filters to get a group of tiddlers.
+ Filters are written in a little language inside tiddlywiki.
+ For example, to get all tiddlers tagged with the 
+\begin_inset Quotes eld
+\end_inset
+
+Person
+\begin_inset Quotes erd
+\end_inset
+
+ tag you write {{{ [tag[Person]] }}}.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+You can add code to your wiki in Macros and Widgets.
+ This is used to personalize the wiki.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 What is tiddlywiki
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement bh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:What-is-Tiddlywiki"
+
+\end_inset
+
+What is Tiddlywiki
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/TW concept.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In this section we will talk about:
 \end_layout
 
@@ -169,11 +421,68 @@ TW as a single page application.
 What are tiddlers.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TiddlyWiki is a personal and a non-linear notebook for organizing and sharing
+ complex information.
+ It is an open-source single page application wiki in the form of a single
+ HTML file that includes all javascript code, the CSS format and the content.
+ It is designed to be easy to customize and re-shape depending on application.
+ It facilitates re-use of content by dividing it into small pieces called
+ Tiddlers.
+ It is not an application but a large html page that runs in almost all
+ web browsers so it is very portable: you can use it in a USB stick, in
+ a phone or tablet or as a web page in some internet servers.
+ Tiddlywiki is made of tiddlers: little text areas or notes with a title
+ and a content.
+ You can add all the tiddlers you want and each of them will contain certain
+ information.
+\end_layout
+
+\begin_layout Standard
+It was created by the British software developer Jeremy Ruston in 2004.
+ Tiddlywiki is free and open source software and is distributed under the
+ terms of the BSD license.
+\end_layout
+
+\begin_layout Standard
+Tiddlywiki introduces the concept of microcontent: the smallest structured
+ and addressable piece of information, the smallest semantically meaningful
+ units.
+ This small piece of information is called tiddler.
+ The purpose of this tiddlers is recording and organizing information is
+ so that it can be used as many times as necessary.
+\end_layout
+
+\begin_layout Standard
+You can find the basic information of Tiddlywiki in the web site: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://tiddlywiki.com/
+\end_layout
+
+\end_inset
+
+.
+ I recommend you take a look.
+\end_layout
+
 \begin_layout Section
 Starting with tiddlywiki
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In this section we will talk about:
 \end_layout
 
@@ -193,11 +502,153 @@ Tagging tiddlers.
 Transclusion and filters.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GettingStarted"
+
+\end_inset
+
+The first run of Tiddlywiki
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/GettingStarted.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first step will be download an empty wiki page to our computer:
+\end_layout
+
+\begin_layout Enumerate
+Go to 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://tiddlywiki.com/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Look for the tiddler 
+\begin_inset Quotes eld
+\end_inset
+
+GettingStarted
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Click on the red button, 
+\begin_inset Quotes eld
+\end_inset
+
+Download Empty
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Save the empty tiddlywiki in your computer.
+\end_layout
+
+\begin_layout Standard
+Once you have the file you can open it with the browser (best with Firefox
+ or Chrome).
+ You will see the page of the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GettingStarted"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Assign a title and a subtitle to your wiki.
+ You will notice that the tick icon above the subtitle change to red.
+\end_layout
+
+\begin_layout Standard
+This shows us an important thing: as an html web page, the TW file can't
+ save by itself.
+ You musts save them by hand if you don't want to loose the data.
+ Click in this red icon and save the file in the same location.
+ The next time you open the empty wiki in the browser the title and subtitle
+ will have changed.
+ Other operations you can do is to create an initial tiddler and change
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+Default tiddlers
+\begin_inset Quotes erd
+\end_inset
+
+ text area to the title of this first tiddler.
+ To create tiddlers you will click on the "plus" icon under the subtitle.
+\end_layout
+
+\begin_layout Standard
+The First Rule of using Tiddlywiki: backup your wiki file regularly retaining
+ some backward copies.
+\end_layout
+
 \begin_layout Section
 Reasons to use tiddlywiki
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In this section we will talk about:
 \end_layout
 
@@ -217,20 +668,300 @@ Basic uses of TW.
 The TW community.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You have powerful reasons to use tiddlywiki:
+\end_layout
+
+\begin_layout Itemize
+You can use them without installing any software.
+\end_layout
+
+\begin_layout Itemize
+It is multiplaform: use your wiki in your tablet, mac, linux, windows or
+ phone systems.
+\end_layout
+
+\begin_layout Itemize
+It is portable: you can put in a USB stick, copy to your computer or upload
+ to many internet servers.
+\end_layout
+
+\begin_layout Itemize
+Its unlinear approach allows you to use the information in new and helpfull
+ ways.
+\end_layout
+
+\begin_layout Itemize
+You can organize your information and knowledge your way.
+\end_layout
+
+\begin_layout Itemize
+You can change the appearance and behavior of your wiki and adapt them to
+ your preferences.
+\end_layout
+
+\begin_layout Itemize
+Tiddlywiki promote information sharing.
+\end_layout
+
 \begin_layout Section
 Elements of TW
+\end_layout
+
+\begin_layout Subsection
+The screen
+\end_layout
+
+\begin_layout Standard
+When you open a Tiddlywiki file you can see a left size with all open tiddlers
+ and a right side with the title, buttons, and menus.
 \end_layout
 
 \begin_layout Subsection
 Tiddlers
 \end_layout
 
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-tiddler"
+
+\end_inset
+
+A tiddler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/A tiddler.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All notes you can add to Tiddlywiki are written in Tiddlers.
+ It consist of a Title on the top, the tags and its content.
+ A Tiddler is the basic element of Tiddliwiki.
+ All things inside TW are made of tiddlers.
+ The GettinStarted page you can see is a tiddler.
+ The right menus too.
+\end_layout
+
+\begin_layout Standard
+The most important thing in a tiddler is its title: this will be unique.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-tiddler"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you can see the first tiddler:
+\end_layout
+
+\begin_layout Itemize
+Buttons to edit and close the tiddler.
+\end_layout
+
+\begin_layout Itemize
+Title: 
+\begin_inset Quotes eld
+\end_inset
+
+My first tiddler
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The field: created date.
+\end_layout
+
+\begin_layout Itemize
+Tags: only one: 
+\begin_inset Quotes eld
+\end_inset
+
+this-is-a-tag
+\begin_inset Quotes erd
+\end_inset
+
+.
+ You can add as many tags as you want.
+\end_layout
+
+\begin_layout Itemize
+Content: 
+\begin_inset Quotes eld
+\end_inset
+
+This is the content of the tiddler
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When you click the 
+\begin_inset Quotes eld
+\end_inset
+
+plus
+\begin_inset Quotes erd
+\end_inset
+
+ icon at the top you can see a tiddler in edition mode:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Creating-a-tiddler"
+
+\end_inset
+
+Creating a tiddler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/tiddler edition.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Buttons to delete, discard and save the tiddler
+\end_layout
+
+\begin_layout Itemize
+Title at the top: 
+\begin_inset Quotes eld
+\end_inset
+
+New Tiddler
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tag zone
+\end_layout
+
+\begin_layout Itemize
+The format toolbar
+\end_layout
+
+\begin_layout Itemize
+The content of the tiddler
+\end_layout
+
+\begin_layout Itemize
+The type of the tiddler
+\end_layout
+
+\begin_layout Itemize
+The fields zone.
+ There are predefined fields but you can add your own fields.
+\end_layout
+
+\begin_layout Standard
+If you close the tiddler it disappears from the screen.
+ You can search it with the search bar, under the save button or choosing
+ in the right menu More / All.
+\end_layout
+
 \begin_layout Subsection
-Wikitext
+The Navigation History
+\end_layout
+
+\begin_layout Standard
+The left side is called the Navigation History and shows all open tiddlers.
+\end_layout
+
+\begin_layout Standard
+A typical wiki contains hundreds or thousands of tiddlers, some of them
+ open in the left side and others closed stored in the file.
+ You can search the closed tiddlers with the search bar or with the menus.
 \end_layout
 
 \begin_layout Subsection
 Tags
+\end_layout
+
+\begin_layout Standard
+Tagging is a way of organizing tiddlers into categories.
+ For example, if you had tiddlers representing various individuals, you
+ could tag them as friend, family, colleague etc to indicate these people's
+ relationships to you.
+ By tagging your tiddlers, you can view, navigate and organize your information.
 \end_layout
 
 \begin_layout Subsection
@@ -238,23 +969,212 @@ Fields
 \end_layout
 
 \begin_layout Standard
-Main fields (icon, color, data-uri...) and its use.
+A tiddler has field.
+ There are system field like the created and modified date but you can add
+ your own ones.
+\end_layout
+
+\begin_layout Subsection
+Text format
+\end_layout
+
+\begin_layout Standard
+The formatted text inside a tiddlerr is called 
+\begin_inset Quotes eld
+\end_inset
+
+Wikitext
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The best way of learing Wikitext is playing with the toolbar above the
+ tiddler in edition mode.
+ For example, if you want some words to be italiced and click in the italic
+ icon of the tool bar while editing a tiddler, Tiddlywiki will add two slashes
+ around the words: 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+//some words//
+\end_layout
+
+\end_inset
+
+.
+ WikiText is a concise, expressive way of typing a wide range of text formatting
+, hypertext and interactive features.
+ It allows you to focus on writing without a complex user interface getting
+ in the way.
+ It is designed to be familiar for users of MarkDown, but with more of a
+ focus on linking and the interactive features.
+\end_layout
+
+\begin_layout Standard
+Other example: you can make a link of a tiddler inside other tiddler writting
+ 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[[Tiddler Title Linked]]
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
 Transclusion
 \end_layout
 
+\begin_layout Standard
+Transclusion is the process of referencing one tiddler "A" from another
+ tiddler "B" such that the content of "A" appears to be a part of "B".
+ It avoid Avoid having duplicate information.
+\end_layout
+
+\begin_layout Itemize
+To show the information of a tiddler inside other, write 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{Tiddler Title}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+To show the content of a field write 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{Tiddler Tittle!!field name}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+to show the content of a field in the same tiddler write: 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{!!field name}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Filters
 \end_layout
 
+\begin_layout Standard
+You can think of TiddlyWiki as a database in which the records are tiddlers.
+ A database typically provides a way of discovering which records match
+ a given pattern, and in TiddlyWiki this is done with filters.
+\end_layout
+
+\begin_layout Standard
+A filter is a concise notation for selecting a particular set of tiddlers.
+ For example, to show the titles of all tiddlers tagged with the 
+\begin_inset Quotes eld
+\end_inset
+
+learn
+\begin_inset Quotes erd
+\end_inset
+
+ tag we can write 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{ [tag[learn]] }}}
+\end_layout
+
+\end_inset
+
+.
+ The 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[learn]]
+\end_layout
+
+\end_inset
+
+ item is the filter and the brackets the way to add the links.
+\end_layout
+
 \begin_layout Subsection
-Code: macros and widgets
+Macros and widgets
+\end_layout
+
+\begin_layout Standard
+Tiddlywiki is highly customizable.
+ It use macros and widgets to personalize its appearance.
+\end_layout
+
+\begin_layout Standard
+A macro is a named snippet of text.
+ When you use it, Tiddlywiki shows its content.
+\end_layout
+
+\begin_layout Standard
+A widget is a piece of code to perform some actions.
 \end_layout
 
 \begin_layout Subsection
 Mechanism
+\end_layout
+
+\begin_layout Standard
+All elements of tiddlywiki fit together through mechanism.
+ For example, the HistoryMechanism keeps track of a list of tiddlers comprising
+ the navigation history.
+ The StartupMechanism runs the installed startup modules at the end of the
+ boot process.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -262,40 +1182,359 @@ Components of the tiddlywiki screen
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In this section we will describe all components of TW.
  We introduce tags as a way of build the tw screen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Key points
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Tiddlywiki page is divided in two main sides.
+ The left is the Story River.
+ The right, the sidebars
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+In the left side appears the tiddlers you open.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+In the right side is the title, subtitle, buttons and the menus.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Tiddlywiki uses special tiddlers and special tags to configure its appearance.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 The TW whole screen
 \end_layout
 
-\begin_layout Section
-The right and left topbars
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-screen-Tiddlywiki"
+
+\end_inset
+
+The Tiddlywiki page
 \end_layout
 
-\begin_layout Section
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/Screen Elements.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-screen-Tiddlywiki"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can see the Tiddlywiki elements.
+ The most important things are the Navigation History on the left and the
+ right elements.
+ The tiddlers that we open will appear in the navigation story on the left.
+ With he right menus we can find all the tiddlers of the file.
+\end_layout
+
+\begin_layout Standard
+These are the elements that we can see in the Tiddlywiki page.
+ But in order to personalize our wiki we must go deeper.
+ You have to know that all this elements are tiddlers: the title and subtitle
+ of your Tiddlywiki are tiddlers.
+ The right menus too.
+ And the search text box is a tiddler too.
+ Even the buttons are tiddlers.
+ The top right and left bars, the Above story, the Below story, all are
+ tiddlers, 
+\series bold
+system
+\series default
+ and 
+\series bold
+shadow
+\series default
+ tiddlers.
+\end_layout
+
+\begin_layout Standard
+Inside Tiddlywiki, all is a tiddler.
+ And you can search and open them.
+ For example if you look for the Subtitle in the search bar in advanced
+ mode (click in the Advanced search icon on the right of the search bar)
+ you will find a tiddler called 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/SiteSubtitle
+\end_layout
+
+\end_inset
+
+.
+ Its a shadow tiddler.
+ If you change its content, the Tiddlywiki subtitle will change.
+ And if you look for the save button you will find the tiddler called 
+\begin_inset listings
+lstparams "language=HTML,breaklines=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/core/ui/Buttons/save
+\end_layout
+
+\end_inset
+
+ with the code of the button.
+\end_layout
+
+\begin_layout Subsection
+The story river
+\end_layout
+
+\begin_layout Standard
+This place of the Tiddlywiki page is where all tiddlers you will open appear.
+ You can configure the way Tiddlywiki will open them in the configuration
+ tiddler (click the gearwheel icon on the right).
+ At first all tiddlers opens each under the other but you can configure
+ it so that only the active tiddler appears.
+\end_layout
+
+\begin_layout Subsection
 The right sidebars
 \end_layout
 
-\begin_layout Subsection
-The title
+\begin_layout Standard
+The right place is where you can see the wiki title, subtitle, the page
+ buttons, the search bar....
+ and under them the sidebars (the menus).
+\end_layout
+
+\begin_layout Standard
+You can see 4 tabs: Open for the open tiddlers, Recent for the tiddlers
+ you have opened, Tools to customize and configure your wiki and More where
+ you can find some utilities.
+ Of course they are four tiddlers: 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/core/ui/SideBar/Open
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/core/ui/SideBar/Recent
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/core/ui/SideBar/Tools
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/core/ui/SideBar/More
+\end_layout
+
+\end_inset
+
+.
+ All of them has the tag: 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/tags/SideBar
+\end_layout
+
+\end_inset
+
+.
+ So if you want to include your own tab create a tiddler and add to them
+ this tag.
+\end_layout
+
+\begin_layout Standard
+This is an important question about Tiddlywiki: The tiddlers that make up
+ the screen are chosen with its tags.
+ For example, above we have seen that if you put the tag 
+\begin_inset listings
+lstparams "language=HTML"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+$:/tags/SideBar
+\end_layout
+
+\end_inset
+
+ to a tiddler it appears on the left side.
+ There are many tags for all places of the screen.
+ You can see then in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tags-TW-places"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tags-TW-places"
+
+\end_inset
+
+The tags of Tiddlywiki places
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-The subtitle
-\end_layout
-
-\begin_layout Subsection
-The buttons
-\end_layout
-
-\begin_layout Subsection
-The search bar
-\end_layout
-
-\begin_layout Subsection
-The tabs
+The right and left topbars
 \end_layout
 
 \begin_layout Subsection
@@ -303,15 +1542,11 @@ Alerts
 \end_layout
 
 \begin_layout Section
-The Story river
-\end_layout
-
-\begin_layout Section
-Templates
+Drawing its interface
 \end_layout
 
 \begin_layout Standard
-Describe what are templates and how TW use them.
+We know all are tiddlers but how Tiddlywiki draws its interface?
 \end_layout
 
 \begin_layout Chapter
@@ -381,7 +1616,7 @@ Customize the TW screen
 \end_layout
 
 \begin_layout Section
-Showing and hidding content
+Showing and hiding content
 \end_layout
 
 \begin_layout Section
@@ -566,7 +1801,7 @@ Basic macros included
 \end_layout
 
 \begin_layout Section
-Writting your own macros
+Writing your own macros
 \end_layout
 
 \begin_layout Section
@@ -615,7 +1850,7 @@ Lists, nested lists, actions and buttons inside lists...
 \end_layout
 
 \begin_layout Section
-Interface scrippting
+Interface scripting
 \end_layout
 
 \begin_layout Standard
@@ -623,7 +1858,7 @@ How to use buttons, edittext, radiobuttons, checkboxes...
 \end_layout
 
 \begin_layout Section
-Data tiddlers scrippting
+Data tiddlers scripting
 \end_layout
 
 \begin_layout Standard
@@ -631,7 +1866,7 @@ How to use data tiddlers.
 \end_layout
 
 \begin_layout Section
-Template scrippting
+Template scripting
 \end_layout
 
 \begin_layout Standard
@@ -639,7 +1874,7 @@ Revealing sections of tiddlywiki, state tiddlers...
 \end_layout
 
 \begin_layout Section
-Tiddlers scrippting
+Tiddlers scripting
 \end_layout
 
 \begin_layout Standard
