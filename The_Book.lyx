@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass book
+\textclass scrbook
 \use_default_options false
 \begin_modules
 customHeadersFooters
@@ -142,7 +142,7 @@ Luis Javier González Caballero
 \begin_inset Newline newline
 \end_inset
 
-Riz - google groups
+
 \end_layout
 
 \begin_layout Standard
@@ -181,6 +181,19 @@ Riz for his help with templates.
 
 \begin_layout Itemize
 Mohammad Rahmani for his wonderful wikis and plugins.
+\end_layout
+
+\begin_layout Itemize
+Chris Hunt for his 
+\begin_inset CommandInset href
+LatexCommand href
+name "Tiddlywiki coding notes"
+target "https://web.archive.org/web/20190413130519/http://cjhunt.github.io/"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -246,6 +259,11 @@ Although you can use tw as a single file, you can have a self-hosted wiki
 But f you want to be a Tiddlywiki master, the first of all is to understand
  the underlying of Tiddliwiki.
  This is where this book is going to help you.
+\end_layout
+
+\begin_layout Standard
+Before reading this publication download an empty copy of Tiddlywiki and
+ try the different features it allows.
 \end_layout
 
 \begin_layout Chapter
@@ -709,7 +727,7 @@ It is portable: you can put in a USB stick, copy to your computer or upload
 \end_layout
 
 \begin_layout Itemize
-Its unlinear approach allows you to use the information in new and helpfull
+Its nonlinear approach allows you to use the information in new and helpfull
  ways.
 \end_layout
 
@@ -1180,6 +1198,12 @@ They (View and Edit templates) are tiddlers.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Filters"
+
+\end_inset
+
 Filters
 \end_layout
 
@@ -1260,12 +1284,22 @@ All elements of tiddlywiki fit together through mechanism.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Lists"
+
+\end_inset
+
 Lists
 \end_layout
 
 \begin_layout Standard
-The manage of list is an important question in Tiddlywiki.
- The more usual list is a tiddler list.
+When you look some information inside Tiddlywiki it gives you a list of
+ tiddlers, so the manage of list is an important question in Tiddlywiki.
+\end_layout
+
+\begin_layout Standard
+The more simplest is a tiddler list.
  This is a list with a few number of tiddlers.
  For example:
 \end_layout
@@ -1278,8 +1312,8 @@ The manage of list is an important question in Tiddlywiki.
 
 \begin_layout Standard
 is a list with 4 tiddlers.
- You can see tiddlers inside [[ - ]] and other tiddlers not.
- If your tiddler contains spaces you have to surround with [[ - ]].
+ You can see tiddlers inside [[ ]] and other tiddlers not.
+ If your tiddler contains spaces you have to surround with [[ ]].
 \end_layout
 
 \begin_layout Standard
@@ -1294,7 +1328,7 @@ You can construct a list with filters.
 \end_layout
 
 \begin_layout Standard
-you can find a list with all tiddlers tagged with the $:/tags/PageTemplate
+this means a list with all tiddlers tagged with the $:/tags/PageTemplate
  tag.
 \end_layout
 
@@ -1313,6 +1347,167 @@ list
 
  field of the tiddler.
  Tiddlywiki will respect that order.
+\end_layout
+
+\begin_layout Chapter
+Using tiddlywiki
+\end_layout
+
+\begin_layout Section
+The philosophy of Tiddlywiki
+\end_layout
+
+\begin_layout Standard
+The purpose of recording and organizing information is so that it can be
+ used again.
+ The value of recorded information is directly proportional to the ease
+ with which it can be re-used.
+\end_layout
+
+\begin_layout Standard
+The philosophy of tiddlers is that we maximize the possibilities for re-use
+ by slicing information up into the smallest semantically meaningful units
+ with rich modeling of relationships between them.
+ Then we use aggregation and composition to weave the fragments together
+ to present narrative stories.
+\end_layout
+
+\begin_layout Standard
+TiddlyWiki aspires to provide an algebra for tiddlers, a concise way of
+ expressing and exploring the relationships between items of information.
+\end_layout
+
+\begin_layout Standard
+TiddlyWiki let you to keep all your things in a non-linear notebook.
+ Divide the complex notes in simple contents and store each of them in a
+ single tiddler.
+ We called each of this simple contents 
+\begin_inset Quotes eld
+\end_inset
+
+microcontent
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tiddlers are the fundamental units of information in TiddlyWiki.
+ Tiddlers work best when they are 
+\series bold
+as small as possible
+\series default
+ so that they can be reused by weaving them together in different ways.
+\end_layout
+
+\begin_layout Standard
+TiddlyWiki gives you different ways to structuring this microcontent:
+\end_layout
+
+\begin_layout Itemize
+Format the tiddler content with Wikitext.
+\end_layout
+
+\begin_layout Itemize
+Use tags to group tiddlers.
+\end_layout
+
+\begin_layout Itemize
+Use fields to store simple tiddler data.
+\end_layout
+
+\begin_layout Itemize
+Include the content of a tiddler inside other tiddler.
+\end_layout
+
+\begin_layout Itemize
+Link your tiddlers with Tiddler links.
+\end_layout
+
+\begin_layout Itemize
+Add external links.
+\end_layout
+
+\begin_layout Itemize
+Search information in your wiki with filters.
+ This produce a list of tiddler titles.
+\end_layout
+
+\begin_layout Itemize
+Customize this list of this filters with widgets and macros.
+\end_layout
+
+\begin_layout Itemize
+Add simple data inside DataTiddlers.
+\end_layout
+
+\begin_layout Section
+Planning your wiki
+\end_layout
+
+\begin_layout Section
+Organizing microcontent with links
+\end_layout
+
+\begin_layout Section
+Organizing tiddlers with tags
+\end_layout
+
+\begin_layout Section
+Personalize behavior with macros and widgets
+\end_layout
+
+\begin_layout Section
+Importing content
+\end_layout
+
+\begin_layout Standard
+Open your favorite text editor and write this lines:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+title:$:/MyTags
+\end_layout
+
+\begin_layout Plain Layout
+
+tags: one two [[number three]] four five six seven eight nine ten
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Save this file as Mytags.tid.
+\end_layout
+
+\begin_layout Standard
+Now drag this file into your tiddlywiki file.
+ You have a new tiddler, 
+\begin_inset Quotes eld
+\end_inset
+
+$:/MyTags
+\begin_inset Quotes erd
+\end_inset
+
+ tagged with all that tags.
+ If you add a new tiddler all this tags are in the tags drop down field.
+\end_layout
+
+\begin_layout Standard
+You can add in this way all fields you want: title, tags, text (the tiddler
+ content) and your personal fields.
 \end_layout
 
 \begin_layout Chapter
@@ -1379,6 +1574,12 @@ A tiddler can have many roles: a plugin, data, formatting code...
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction"
+
+\end_inset
+
 Introduction
 \end_layout
 
@@ -1388,10 +1589,6 @@ placement h
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1556,21 +1753,10 @@ bootKernelPrefix
 \begin_layout Standard
 So, at the bottom Tiddlywiki is a html page with a lot of javascript code
  inside it.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-In this section we describe the loading of TW simplified for a non-programmer
- to understand: from the fist javascript function to the last rendering
- wikitext to html page elements.
-\end_layout
-
-\end_inset
-
-
+ When the browser loads this file, it runs the javascript code and the content
+ of the page change.
+ At the end of this chapter there is a diagram of the html code after the
+ browser has loaded this file.
 \end_layout
 
 \begin_layout Section
@@ -1652,24 +1838,38 @@ l tiddlers.
  Internally Tiddlers are immutable objects containing a bunch of key:value
  pairs called fields.
  The only required field of a tiddler is the title field.
-\end_layout
+ In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:The-tiddler-type"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Chapter
-Components of the tiddlywiki screen
+\end_inset
+
+ you can see all roles of a tiddler.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+\begin_inset Newpage clearpage
+\end_inset
 
-\begin_layout Plain Layout
-In this section we will describe all components of TW.
- We introduce tags as a way of build the tw screen.
+
 \end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename Images/dom_graph.pdf
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+Components of the tiddlywiki screen
 \end_layout
 
 \begin_layout Section
@@ -1781,7 +1981,7 @@ The Tiddlywiki page
 \end_layout
 
 \begin_layout Standard
-In Figure
+In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-screen-Tiddlywiki"
@@ -2801,6 +3001,484 @@ noprefix "false"
 \end_inset
 
  we will see a map with many css standard classes.
+ The best way of using this map is search the classes in it in the main
+ css Tiddlywiki style sheet, $:/themes/tiddlywiki/vanilla/base.
+ In this way you can see the values of the classe you are looking.
+\end_layout
+
+\begin_layout Standard
+Other way of play with this classes is with the firefox inspector.
+ With it you can dinamicaly change its values.
+ In the next table we can see some properties of css classes.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size footnotesize
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Property
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Example
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+display
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+display: none
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Hide the element
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+border
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+border: 2px dotted red
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Draw a border
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+border-radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+border-radius: 20px
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Rounded corners
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+color
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+color: red
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Text color
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+background-color
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+background-color: lightgray
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Background color
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-style
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-style: italic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+italic, normal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-weight
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-weight: bold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-size: 15pt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Font size
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-family
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+font-family: "Times New Roman", Times, serif;
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+column-count
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+column-count: 3;
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Number of columns
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+text-align
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+text-align: right
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+left, right, center, justify
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+transform
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+transform: rotate(20deg);
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+rotate, skewY, scaleY...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2917,6 +3595,46 @@ noprefix "false"
 \end_inset
 
  you see the style tiddler and the new appearance of the paragraphs.
+\end_layout
+
+\begin_layout Section
+Create a loading message
+\end_layout
+
+\begin_layout Standard
+If the Tiddlywiki is big the loading in the browser may be delayed.
+ This is a way to show a little message while it is loading:
+\end_layout
+
+\begin_layout Itemize
+Create a new tiddler.
+ Its tittle is not important.
+\end_layout
+
+\begin_layout Itemize
+Add the loading message in its content.
+ For example, 
+\begin_inset Quotes eld
+\end_inset
+
+The wiki is loading.
+ Please, wait...
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Add the tag $:/tags/RawMarkupWikified/TopBody
+\end_layout
+
+\begin_layout Itemize
+Add the type text/vnd.tiddlywiki
+\end_layout
+
+\begin_layout Itemize
+Save.
 \end_layout
 
 \begin_layout Section
@@ -3580,6 +4298,109 @@ Inside a tiddler
 \end_layout
 
 \begin_layout Section
+Key points
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+A tiddler can perform many roles in Tiddlywiki
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+There are many kinds of tiddlers depending of the Content Type field an
+ its tags.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+For the external 
+\begin_inset Quotes eld
+\end_inset
+
+image
+\begin_inset Quotes erd
+\end_inset
+
+ tiddler types, you have to add the 
+\begin_inset Quotes eld
+\end_inset
+
+_canonical_uri
+\begin_inset Quotes erd
+\end_inset
+
+ field with the link of the external file.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Normal tiddler: tiddler with your notes.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Tag tiddler: a tiddler with the same title as a tag.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Alert tiddler: a tiddler that appears on top of all other tiddlers.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Dictionary and JSON tiddlers: tiddlers for storing short information.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+CSS tiddlers: tiddlers with css classes for formatting your tiddlers.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Template tiddlers: tiddlers used as a template for other tiddlers.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Macro tiddlers: tiddlers with your code
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Javascript tiddlers: Macros and Widgets.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Types of tiddlers
 \end_layout
 
@@ -3681,11 +4502,30 @@ Javascript
 \begin_inset space ~
 \end_inset
 
-tiddler: a tiddler with javascript code.
+tiddler: A tiddler with javascript code.
  It stores the tiddlywiki code and your widgets.
 \end_layout
 
+\begin_layout Description
+Other
+\begin_inset space ~
+\end_inset
+
+system
+\begin_inset space ~
+\end_inset
+
+tiddlers: There are special tiddlers that have utility to configure tiddlywiki.
+ They are usually tiddlers with a specific name.
+\end_layout
+
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-tiddler-type"
+
+\end_inset
+
 The tiddler type field
 \end_layout
 
@@ -3702,7 +4542,7 @@ If you add a tiddler you can see under the content a field: Type.
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="30" columns="3">
+<lyxtabular version="3" rows="32" columns="3">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0pt">
@@ -4676,7 +5516,7 @@ audio/mp3
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4687,7 +5527,7 @@ Video mp4
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4698,11 +5538,78 @@ video/mp4
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\shape italic
+\size footnotesize
+\color blue
+Other
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
+\size footnotesize
+Splash string
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+$:/tags/RawMarkupWikified/TopBody
 \end_layout
 
 \end_inset
@@ -5187,6 +6094,120 @@ instructions
 \end_layout
 
 \begin_layout Section
+Other system tiddlers
+\end_layout
+
+\begin_layout Subsection
+$:/config/EmptyStoryMessage
+\end_layout
+
+\begin_layout Standard
+Here you can add a little message that appears if you close all tiddlers.
+ When you close all tiddlers this message appears as plain text without
+ Wikitext or any format options.
+\end_layout
+
+\begin_layout Standard
+If you want a more complicated message you can transclude a custom tiddler
+ with the $:/core/ui/ViewTemplate template.
+ These are the steps:
+\end_layout
+
+\begin_layout Enumerate
+Create the tiddler you want to show when all tiddlers are closed.
+ For example, 
+\begin_inset Quotes eld
+\end_inset
+
+Empty List
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Add your message in the content, for example: 
+\begin_inset listings
+lstparams "breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+You have closed all tiddlers.
+ Use the menu on the right to open any of them or click on [[GettingStarted]]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Create the tiddler $:/config/EmptyStoryMessage
+\end_layout
+
+\begin_layout Enumerate
+Add the code {{Empty List||$:/core/ui/ViewTemplate}} to its content.
+\end_layout
+
+\begin_layout Enumerate
+Save all.
+\end_layout
+
+\begin_layout Standard
+Now, if you close all tiddler this is the screen:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-$:/config/EmptyStoryMessage"
+
+\end_inset
+
+The $:/config/EmptyStoryMessage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/Emtpy Storylist.png
+	lyxscale 75
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can see in this figure there are no open tiddlers (look at the right
+ open tab menu) but it shows the Empty List tiddler.
+\end_layout
+
+\begin_layout Section
 Adding macros and widgets
 \end_layout
 
@@ -5206,63 +6227,2260 @@ Here you can find basic information.
 \end_layout
 
 \begin_layout Chapter
-The filter notation
+Filters
 \end_layout
 
+\begin_layout Section
+Key points
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Filters are a way to find information in your wiki.
+ They produce a list of tiddlers.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Each filter expression is divided in many simple filters.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Each simple filter is called a filter step.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Each simple step is enclosed in [ ].
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Each simple filter represents a simple search criteria.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The simplest way of using filters is enclosing them: {{{ the filter }}}
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+You can customize the list produced by the filter using widgets.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Write {{{ [search1] [search2] }}} to find tiddlers that are in search1 OR
+ in search2.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Write {{{ [search1] +[search2] }}} to find tiddlers that are in search1
+ AND in search2.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Write {{{ [search1] -[search2] }}} to find tiddlers that are in search1
+ AND NOT in search2.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Write {{{ [!search] to find all tiddlers that are not in the search.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The main part of a simple filter is the filter operator.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+There are many filter operators.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+It is impossible to show all operators here, so it is important to understand
+ the filter operator reference in the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Tiddlywiki site"
+target "https://tiddlywiki.com/#Filter%20Operators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+You can concatenate operators in a simple filter expression.
+ For example, use {{{ [prefix[F]suffix[n]!sort[]] }}} to show the tiddlers
+ that start with F and end with n sorted in descendant order.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+What is a filter?
+\end_layout
+
+\begin_layout Standard
+Filters are the heart of Tiddlywiki.
+ More than a half or all customizations you make will include filters.
+ This means that understanding filters is crucial.
+\end_layout
+
+\begin_layout Standard
+To understand filters we need to realize some points:
+\end_layout
+
+\begin_layout Itemize
+Tiddlywiki is a database of tiddlers.
+ You saw in the code of Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Introduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that there is a section of the html file called Store Area dedicated of
+ storing the tiddlers.
+\end_layout
+
+\begin_layout Itemize
+The main task of knowledge management is to find what information matches
+ a certain pattern.
+ In Tiddlywiki this means finding what tiddlers match a given pattern.
+\end_layout
+
+\begin_layout Itemize
+You can do this task with Filters.
+\end_layout
+
+\begin_layout Itemize
+When you search your information with a filter, Tiddlywiki gives you a list
+ of tiddlers called 
+\begin_inset Quotes eld
+\end_inset
+
+the output
+\begin_inset Quotes erd
+\end_inset
+
+.
+ You find the List concept in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Lists"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So a filter is a concise notation for selecting a particular set of tiddlers.
+ To work with filters you must perform two steps:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Prepare the filter expression
+\series default
+.
+ This includes the filter operators (tag, prefix, contains, field...) and parameter
+s.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Use the filter
+\series default
+.
+ This includes using widgets ($list, $link, $transclude...) and variables (<<curren
+tTiddler>>).
+\end_layout
+
+\begin_layout Section
+The filter expression
+\end_layout
+
+\begin_layout Standard
+A filter expression is many simple filters written one after another:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SimpleFilter1 SimpleFilter2 SimpleFilter3...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You must separate the simple filters with a white space.
+ We call each simple expression 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+a filter step
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This simple expressions can be preceded with the prefixes =, +, -, ~ or
+ nothing:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SimpleFilter1 SimpleFilter2
+\end_layout
+
+\end_inset
+
+: Union of the two list (OR combination)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[manager]]
+\end_layout
+
+\end_inset
+
+ produces a list with all tiddlers tagged with the 
+\begin_inset Quotes eld
+\end_inset
+
+manager
+\begin_inset Quotes erd
+\end_inset
+
+ tag.
+\end_layout
+
+\begin_layout Itemize
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[manager]] [tag[employee]]
+\end_layout
+
+\end_inset
+
+ produces a list with all managers and all empooyees (it list a tiddler
+ if it has the 
+\begin_inset Quotes eld
+\end_inset
+
+manager
+\begin_inset Quotes erd
+\end_inset
+
+ tag OR the 
+\begin_inset Quotes eld
+\end_inset
+
+employee
+\begin_inset Quotes erd
+\end_inset
+
+ tag.
+ Maybe the managers will be listed twice).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SimpleFilter1 =SimpleFilter2
+\end_layout
+
+\end_inset
+
+: Union of the two list without duplication.
+ (OR combination)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[manager]] =[tag[employee]]
+\end_layout
+
+\end_inset
+
+ produces the list of all managers and all employees.
+ Each person is listed once.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SimpleFilter1 +SimpleFilter2
+\end_layout
+
+\end_inset
+
+: The tiddlers must match both filters.
+ It is the intersections of the two list (AND combination)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[manager]] +[tag[has car]]
+\end_layout
+
+\end_inset
+
+ produce a list with all managers with car (it list a tiddler if it has
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+manager
+\begin_inset Quotes erd
+\end_inset
+
+ tag AND the 
+\begin_inset Quotes eld
+\end_inset
+
+has car
+\begin_inset Quotes erd
+\end_inset
+
+ tag).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SimpleFilter1 -SimpleFilter2
+\end_layout
+
+\end_inset
+
+: The tiddlers must match the first filter expression and must not match
+ the second.
+ It is the difference of the two list (AND NOT combination).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[employee]] -[tag[manager]]
+\end_layout
+
+\end_inset
+
+ produce a list of all employees that are not managers (it list a tiddler
+ if it has the employee tag AND NOT has the manager tag).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SimpleFilter1 ~SimpleFilter2
+\end_layout
+
+\end_inset
+
+: It produces the list of the first filter.
+ If it is empty, it produces the list of the second filter (ELSE combination)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag[manager]] ~[tag[employee]]
+\end_layout
+
+\end_inset
+
+.
+ It produces a list with all managers.
+ If there is no managers it list all employees.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Using filters
+\end_layout
+
+\begin_layout Standard
+Imagine you have a wiki with the employees of your company.
+ Some of them are managers and a few have a car given by the company.
+ Your tags are: 
+\begin_inset Quotes eld
+\end_inset
+
+employee
+\begin_inset Quotes erd
+\end_inset
+
+ for all employees, 
+\begin_inset Quotes eld
+\end_inset
+
+manager
+\begin_inset Quotes erd
+\end_inset
+
+ for the managers and 
+\begin_inset Quotes eld
+\end_inset
+
+has car
+\begin_inset Quotes erd
+\end_inset
+
+ for the employees with assigned car.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-simple-output"
+
+\end_inset
+
+The simple output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/filters.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using filters can be tricky.
+ The simplest use is enclosing the filter expression between three curly
+ brackets:
+\end_layout
+
+\begin_layout Itemize
+Add a new tiddler: 
+\begin_inset Quotes eld
+\end_inset
+
+All employees
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In the content of this tiddler add this text: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{[tag[employee]]}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Save the it.
+\end_layout
+
+\begin_layout Standard
+You will see the output of the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-simple-output"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ You know each line is the title of a tiddler, so in your wiki you have
+ 7 tiddlers tagged with 
+\begin_inset Quotes eld
+\end_inset
+
+employee
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-desire-output"
+
+\end_inset
+
+The desire output
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/using_filters.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But if you want a more complicated output you have to use widgets.
+ Imagine you want to show the list of the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-desire-output"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the tiddlers you have in your wiki.
+ This is a list with the employees who have an assigned car and his state.
+ You have to write this code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$list filter="[tag[employee]] +[tag[has car]]">
+\end_layout
+
+\begin_layout Plain Layout
+
+  <li><$link><<currentTiddler>></$link> --- {{!!state}}</li> 
+\end_layout
+
+\begin_layout Plain Layout
+
+</$list>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this code we can see:
+\end_layout
+
+\begin_layout Itemize
+We use the $list widget.
+\end_layout
+
+\begin_layout Itemize
+With each tiddler of the filter output, we show:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A list <li> element.
+\end_layout
+
+\begin_layout Itemize
+The link ($link widget) of current tiddler (<<currentTiddler>> variable).
+\end_layout
+
+\begin_layout Itemize
+A long dash (the - - - element).
+\end_layout
+
+\begin_layout Itemize
+The content of the 
+\begin_inset Quotes eld
+\end_inset
+
+state
+\begin_inset Quotes erd
+\end_inset
+
+ field of the current tiddler ({{!!state}} element).
+\end_layout
+
+\end_deeper
 \begin_layout Section
 The filter basic step
 \end_layout
 
-\begin_layout Section
-Using filter operators
+\begin_layout Standard
+Each Simple filter is called 
+\begin_inset Quotes eld
+\end_inset
+
+a basic step
+\begin_inset Quotes erd
+\end_inset
+
+.
+ You may have notice that all SimpleFilter expression is surrounded between
+ [ ].
+ So each Filter Basic step is:
 \end_layout
 
-\begin_layout Section
-Combining filter steps
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[ ! operator:sufix parameter ! operator:sufix parameter ...]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can repeat this sequence as many times as you need.
+ Each occurrence of 
+\begin_inset Quotes eld
+\end_inset
+
+!operator:suffix parameter
+\begin_inset Quotes erd
+\end_inset
+
+ use the list produced by its predecessors.
+ This list is called 
+\begin_inset Quotes eld
+\end_inset
+
+the input
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+All elements are optional:
 \end_layout
 
 \begin_layout Itemize
-combining by OR
+The ! means not.
+ For example, [!tag[has-car]]: tiddlers without the tag 
+\begin_inset Quotes eld
+\end_inset
+
+has-car
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-combining by AND
+Operator: the most important part of the filter.
+ In the above examples the operator is 
+\begin_inset Quotes eld
+\end_inset
+
+tag
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-combining by NOT
+Suffix: some operators has special flags.
+ For example, the tag operator has a flag, strict that modifies its behaviour
+ in some cases so the output with {{{ [tag[]] }}} is different from {{{
+ [tag:strict[]] }}}.
+\end_layout
+
+\begin_layout Itemize
+Parameter: In the above examples the parameter is the desire tag, 
+\begin_inset Quotes eld
+\end_inset
+
+employee
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+manager
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+has-car
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Usually the parameter is surrounded with [ ] too.
+ If there is no parameter: write [] as above.
+\end_layout
+
+\begin_layout Standard
+The main trick of filters is understand the filter operators.
+ There are a lot of them so write about all is out of the scope of this
+ publication.
+ If you want to know more about them you have to go to the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Filter Operators"
+target "https://tiddlywiki.com/#Filter%20Operators"
+literal "false"
+
+\end_inset
+
+ section of Tiddlywiki.
+\end_layout
+
+\begin_layout Standard
+Let's look an example:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The prefix operator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/prefix_operator.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How to read this tiddler:
+\end_layout
+
+\begin_layout Itemize
+Purpose: What you can use the operator for.
+\end_layout
+
+\begin_layout Itemize
+Input: The first 
+\begin_inset Quotes eld
+\end_inset
+
+!operator:suffix parameter
+\begin_inset Quotes erd
+\end_inset
+
+ occurrence has an empty input.
+ For the second occurrence, the input is the list produced by the first
+ and so on.
+ Each 
+\begin_inset Quotes eld
+\end_inset
+
+!operator:suffix parameter
+\begin_inset Quotes erd
+\end_inset
+
+ filters the list produced by the predecessors.
+\end_layout
+
+\begin_layout Itemize
+Parameter: The parameter of the operator.
+ In this operator is a sequence of characters so you can write [prefix[H]]
+ to show all tiddlers with the tittle starting with 
+\begin_inset Quotes eld
+\end_inset
+
+H
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Output: What list produce the operator.
+\end_layout
+
+\begin_layout Itemize
+!Output: What list produce the operator if you put, for example, [!prefix[H]].
+\end_layout
+
+\begin_layout Standard
+Example: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{ [prefix[F]suffix[n]!sort[]] }}}
+\end_layout
+
+\end_inset
+
+ This 
+\series bold
+simple filter expression
+\series default
+ has three repetitions of 
+\begin_inset Quotes eld
+\end_inset
+
+!operator:suffix parameter
+\begin_inset Quotes erd
+\end_inset
+
+ and it means: 
+\begin_inset Quotes eld
+\end_inset
+
+Show all tiddlers that begin with F and end with n in descending order
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+{{{ : Show the result filter expression as a list of tiddlers.
+\end_layout
+
+\begin_layout Itemize
+[ : Start of the Simple Filter Expression.
+\end_layout
+
+\begin_layout Itemize
+prefix[F]: produce the list of all tiddlers whose title begins with 
+\begin_inset Quotes eld
+\end_inset
+
+F
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+suffix[n]: Filter this list and produces a list with the tiddlers whose
+ title ends with 
+\begin_inset Quotes eld
+\end_inset
+
+n
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+!sort[] Sort descending the list of the tiddlers whose title starts with
+ 
+\begin_inset Quotes eld
+\end_inset
+
+F
+\begin_inset Quotes erd
+\end_inset
+
+ and ends with 
+\begin_inset Quotes eld
+\end_inset
+
+n
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+] : Ends the Filter Simple Expression.
+\end_layout
+
+\begin_layout Itemize
+}}} : Finish the code.
+\end_layout
+
+\begin_layout Standard
+If you add a tiddler with this code to the tiddlywiki site you can see the
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-filter-example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-filter-example"
+
+\end_inset
+
+A filter example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/Filter_example.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remember that this is a single step of a filter expression and that you
+ can concatenate as many single filter expression as you want.
+ For example, you can show the tiddlers whose title starts with 
+\begin_inset Quotes eld
+\end_inset
+
+F
+\begin_inset Quotes erd
+\end_inset
+
+ and ends with 
+\begin_inset Quotes eld
+\end_inset
+
+n
+\begin_inset Quotes erd
+\end_inset
+
+ tagged with 
+\begin_inset Quotes eld
+\end_inset
+
+Filter Syntax
+\begin_inset Quotes erd
+\end_inset
+
+ with this code: 
+\begin_inset listings
+lstparams "showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+{{{ [prefix[F]suffix[n]] +[tag[Filter Syntax]] }}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have here two simple filter expressions, the second one with the 
+\begin_inset Quotes eld
+\end_inset
+
++
+\begin_inset Quotes erd
+\end_inset
+
+ prefix forming a more complex filter expression.
 \end_layout
 
 \begin_layout Section
 Regular expressions
 \end_layout
 
-\begin_layout Section
-Filter uses
+\begin_layout Subsection
+Writing regular expressions
 \end_layout
 
-\begin_layout Section
-Examples
+\begin_layout Standard
+Regular expressions are concise strings of characters that denote patterns
+ of text to search for.
+ Tiddlywiki uses the Javascript regular expressions.
+ The most important is the representation of this patterns.
+ This table shows the most important patterns:
 \end_layout
 
-\begin_layout Chapter
-The behavior of tiddlywiki
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="25" columns="2">
+<features booktabs="true" islongtable="true" headBottomDL="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+character
 \end_layout
 
-\begin_layout Section
-Creating microcontent
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+meaning
 \end_layout
 
-\begin_layout Section
-Organizing microcontent with links
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.
 \end_layout
 
-\begin_layout Section
-Organizing tiddlers with tags
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Any character
 \end_layout
 
-\begin_layout Section
-Personalize behavior with macros and widgets
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zero or more repetitions of the character or previous group
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+one or more repetitions of the character or previous group
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+^
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Start of line
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+End of line
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[ ]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Group or characters
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+( )
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sub expressions
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(a|b|c)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a or b or c
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coincides with the previous element zero or one times
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+??
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coincides with the previous element one or no times
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+{n}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coincides with the previous element n times
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+{n,m}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+with the previous element at least n times and at most m times
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[a-z]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Any character between a and z
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+w
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Any character of a word: a-zA-Z
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+W
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Any character other than the previous one
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Blank space
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+S
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Any character that is not a blank space
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A dígit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Anything other than a digit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+t
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a tab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+r
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Carriage return
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+n
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+New line
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+1 
+\backslash
+2 
+\backslash
+3 ...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The group number 1 or number 2 or the n
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The following character is treated as literal (e.g.
+ 
+\backslash
+ * indicates the asterisk)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Building-the-regular"
+
+\end_inset
+
+Building the regular expression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/regular_expressions.png
+	lyxscale 25
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The most complicated thing is to build the regular expression.
+ I recommend dividing the string you want to look for in its main parts.
+ For example, imagine you want to search all tiddlers that has a date in
+ his title like 25th August 2019.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Building-the-regular"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you can see all parts of this string:
+\end_layout
+
+\begin_layout Itemize
+^: The start of the line
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+d{1,2}: One or two digits
+\end_layout
+
+\begin_layout Itemize
+(st|nd|rd|th): One of this: st or nd or rd or th.
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+s: a space
+\end_layout
+
+\begin_layout Itemize
+(January|February|March|April|May|June|July|August|September|October|November|De
+cember): The month
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+s: A space
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+d{4}: Four digits
+\end_layout
+
+\begin_layout Itemize
+$: The end of the line
+\end_layout
+
+\begin_layout Standard
+So the regular expression is 
+\begin_inset listings
+lstparams "breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+^
+\backslash
+d{1,2}(st|nd|rd|th)
+\backslash
+s(January|February|March|April|May|June|July|August|September|October|November|D
+ecember)
+\backslash
+s
+\backslash
+d{4}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Using regular expressions
+\end_layout
+
+\begin_layout Standard
+Using regular expressions is not complicated.
+ Tiddlywiki has a filter operator: regexp to define this kind of searches.
+ Create a new tiddler an add this in the body:
+\end_layout
+
+\begin_layout Standard
+Tiddlers titled with two letters: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{ [regexp[^
+\backslash
+w{2}$]] }}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tiddlers ending with 
+\begin_inset Quotes eld
+\end_inset
+
+wiki
+\begin_inset Quotes erd
+\end_inset
+
+ in its title: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{ [regexp[wiki$]] }}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tiddlers created in August 2014: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{ [regexp:created[^201408]] }}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If you want more complicated expressions is better to define a variable
+ with the pattern.
+ Tiddlywiki has problems with groups.
+ For example, if you want to search all tiddlers ending with the words 
+\begin_inset Quotes eld
+\end_inset
+
+wiki
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+tiddler
+\begin_inset Quotes erd
+\end_inset
+
+ and write: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+{{{ [regexp[(wiki|tiddlers)$]] }}}
+\end_layout
+
+\end_inset
+
+ Tiddlywiki shows an error.
+ You have to write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$set name="pattern" value="(wiki|tiddlers)$">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{{{ [regexp<pattern>] }}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+</$set>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, if you want to show all tiddlers who has a date in its title, as in
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Building-the-regular"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you have to write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$set name="pattern" value="^
+\backslash
+d{1,2}(st|nd|rd|th)
+\backslash
+s(January|February|March|April|May|June|July|August|September|October|November|D
+ecember)
+\backslash
+s
+\backslash
+d{4}$">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{{{ [regexp<pattern>]}}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+</$set>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One tricky question in regular expressions are capturing groups.
+ Each subexpresion (a pattern surrounded by parentheses) is called a capturing
+ group.
+ We can refer to the first capture group by 
+\backslash
+1.
+ The second by 
+\backslash
+2 and so respectively.
+\end_layout
+
+\begin_layout Standard
+Imagine you want to show all tiddlers that starts and ends with 
+\begin_inset Quotes eld
+\end_inset
+
+Wiki
+\begin_inset Quotes erd
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$set name="pattern" value="^(Wiki).*
+\backslash
+1$">
+\end_layout
+
+\begin_layout Plain Layout
+
+{{{ [regexp<pattern>]}}} </$set>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The (Wiki) is the first capturing group of the expression.
+ If you want to refer later to this pattern you write 
+\backslash
+1.
+\end_layout
+
+\begin_layout Standard
+Be careful with this.
+ Maybe you want to search a tiddler that start and end with any two numbers,
+ so you write this: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+^(
+\backslash
+d{2}).*
+\backslash
+1$
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+^: Start of line
+\end_layout
+
+\begin_layout Itemize
+(
+\backslash
+d{2}): two digits, first capturing group.
+\end_layout
+
+\begin_layout Itemize
+.*: Any character repeated many times
+\end_layout
+
+\begin_layout Itemize
+
+\backslash
+1: Two digits.
+\end_layout
+
+\begin_layout Itemize
+$: End of line
+\end_layout
+
+\begin_layout Standard
+You will find only the tiddlers who start and end WITH THE SAME TWO DIGITS.
+ If you want to search not the same numbers you have to write 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+^
+\backslash
+d{2}.*
+\backslash
+d{2}$
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
@@ -6944,11 +10162,7 @@ Tags: Words to classify the tiddlers
 Resources
 \end_layout
 
-\begin_layout Section*
-Chapter 2
-\end_layout
-
-\begin_layout Standard
+\begin_layout Itemize
 Tiddlywiki for developers, Jeremy Ruston.
  
 \begin_inset CommandInset href
@@ -6962,14 +10176,6 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Section*
-Chapter 4
-\end_layout
-
-\begin_layout Itemize
-Notes from Riz at google groups.
-\end_layout
-
 \begin_layout Itemize
 The 
 \begin_inset CommandInset href
@@ -6980,15 +10186,23 @@ literal "false"
 
 \end_inset
 
-, by Tom Gerner.
+, by Ton Gerner.
 \end_layout
 
-\begin_layout Section*
-Chapter 9
+\begin_layout Itemize
+RegExp in Tiddywiki, by Mohammad Rahmani.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://tw-regexp.tiddlyspot.com/"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-Tidldywiki coding, by Crhis Hunt.
+\begin_layout Itemize
+Tidldywiki coding , by Chris Hunt.
  
 \begin_inset CommandInset href
 LatexCommand href

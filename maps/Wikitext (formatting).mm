@@ -210,7 +210,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="{{Tiddler Title||field}}" STYLE_REF="Lista normal" ID="ID_1514905917" CREATED="1572426394475" MODIFIED="1572426512354"><richcontent TYPE="DETAILS">
+<node TEXT="{{Tiddler Title!!field}}" STYLE_REF="Lista normal" ID="ID_1514905917" CREATED="1572426394475" MODIFIED="1573208396188"><richcontent TYPE="DETAILS">
 
 <html>
   <head>
@@ -264,7 +264,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
