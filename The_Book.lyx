@@ -7207,7 +7207,7 @@ Input: The first
 \begin_inset Quotes erd
 \end_inset
 
- occurrence has an empty input.
+ occurrence has all tiddlers as the input.
  For the second occurrence, the input is the list produced by the first
  and so on.
  Each 
@@ -8454,7 +8454,7 @@ d{2}): two digits, first capturing group.
 \begin_layout Itemize
 
 \backslash
-1: Two digits.
+1: Two digits again.
 \end_layout
 
 \begin_layout Itemize
@@ -8719,15 +8719,1459 @@ Widgets
 \end_layout
 
 \begin_layout Section
-Using widgets
+Introduction
+\end_layout
+
+\begin_layout Standard
+Widgets are trickiest part of Tiddlywiki.
+ Each widget has a special purpose: add a checkbox, create a button, display
+ a field etc.
+ There are core widgets and other widgets you can add as plugins.
+\end_layout
+
+\begin_layout Standard
+We learn widgets solving a problem: Create a custom to-do wiki.
+ The easy an worst way is create a tiddler for each task and other tiddler
+ with all this tasks:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+* [[Study javascript]]
+\end_layout
+
+\begin_layout Plain Layout
+
+* [[Download github]]
+\end_layout
+
+\begin_layout Plain Layout
+
+* [[Create the repository]]
+\end_layout
+
+\begin_layout Plain Layout
+
+* [[Download the code]]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This has a terrible problem: you have no control of the tasks you finish.
+ Of course you can edit the tasks tiddlers and add a tag, 
+\begin_inset Quotes eld
+\end_inset
+
+done
+\begin_inset Quotes erd
+\end_inset
+
+ for the tiddlers you finish but this is a big effort.
 \end_layout
 
 \begin_layout Section
-Basic widgets included
+The checkbox widget
+\end_layout
+
+\begin_layout Standard
+If you read the tiddler for this widget you find that you can save the status
+ of the widget in:
+\end_layout
+
+\begin_layout Itemize
+A tag (tag mode): the easiest
+\end_layout
+
+\begin_layout Itemize
+A tiddler: useful for shared status.
+\end_layout
+
+\begin_layout Itemize
+A field (field mode): of the same tiddler or other tiddler.
+\end_layout
+
+\begin_layout Itemize
+An index of a data tiddler (index mode).
+\end_layout
+
+\begin_layout Standard
+These are the attributes for the checkbox widget:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="90text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Attribute
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+tiddler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Title of the tiddler to manipulate (defaults to the current tiddler)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+tag
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+The name of the tag to which the checkbox is bound
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+invertTag
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+When set to yes, flips the tag binding logic so that the absence of the
+ tag causes the checkbox to be checked
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+field
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+The name of the field to which the checkbox is bound
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+index
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+New in: 5.1.14 The index of the tiddler, a DataTiddler, to which the checkbox
+ is bound be sure to set the tiddler correctly
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+checked
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+The value of the field corresponding to the checkbox being checked
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+unchecked
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+The value of the field corresponding to the checkbox being unchecked
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+default
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+The default value to use if the field is not defined
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+class
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+The class that will be assigned to the label element
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+actions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+New in: 5.1.14 A string containing ActionWidgets to be triggered when the
+ status of the checkbox changes (whether it is checked or unchecked)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For our little project we use the tag mode.
+ This is the tasks tiddler code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$checkbox tiddler="Study javascript" tag="done"> [[Study javascript]]</$checkbo
+x><br/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$checkbox tiddler="Download github" tag="done"> [[Download github]]</$checkbox>
+<br/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$checkbox tiddler="Create the repository" tag="done"> [[Create the repository]]
+</$checkbox><br/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$checkbox tiddler="Download the code" tag="done"> [[Download the code]]</$check
+box><br/>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Adding-a-checkbox"
+
+\end_inset
+
+Adding a checkbox
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/checkbox_widget.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Adding new tasks is still a complex process.
+ We need an easy way of listing the tasks.
+ We solve this with other tiddler: $list.
 \end_layout
 
 \begin_layout Section
-Writting your own widgets
+The $list widget
+\end_layout
+
+\begin_layout Standard
+We have to simplify things.
+ We have to tell Tiddlywiki which tiddlers are tasks.
+ We do this adding the 
+\begin_inset Quotes eld
+\end_inset
+
+task
+\begin_inset Quotes erd
+\end_inset
+
+ tag for task tiddlers.
+ We saw the $list widgets in the 
+\begin_inset Quotes eld
+\end_inset
+
+Filters
+\begin_inset Quotes erd
+\end_inset
+
+ chapter.
+ Is an easy way to list custom tiddlers.
+ For our purpose we want to list all task tiddlers:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$list filter="[tag[task]]">
+\end_layout
+
+\begin_layout Plain Layout
+
+<$checkbox tag="done"/> <$link><<currentTiddler>></$link><br/>
+\end_layout
+
+\begin_layout Plain Layout
+
+</$list>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you tag all tasks with the tag 
+\begin_inset Quotes eld
+\end_inset
+
+task
+\begin_inset Quotes erd
+\end_inset
+
+ the output will be the same of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Adding-a-checkbox"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The difference is that creating new tasks is easy: create a new tiddler
+ and tag it with the 
+\begin_inset Quotes eld
+\end_inset
+
+task
+\begin_inset Quotes erd
+\end_inset
+
+ tag.
+ The list will update immediately.
+ You can see this widget as a loop: it loops over all tiddlers of the filter
+ list executing the code between <$list..> and </$list>.
+ Look at Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-widget-loop"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-widget-loop"
+
+\end_inset
+
+The widget loop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/widget_loop.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example our widget loops over the tasks tiddlers writing the lines:
+ <$checkbox tag="done"/> <$link><<currentTiddler>></$link><br/>.
+ There are an important question here: the widget inserts lines one after
+ another without any blank lines in the middle.
+ This can cause problems with wikitext: you know that there are wikitext
+ formats that needs a blank line before them.
+ for example, if you add to a tiddler:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+This is my list:
+\end_layout
+
+\begin_layout Plain Layout
+
+* item 1
+\end_layout
+
+\begin_layout Plain Layout
+
+* item 2
+\end_layout
+
+\begin_layout Plain Layout
+
+* item 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You will see this output: 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+This is my list: * item 1 * item 2 * item 3
+\end_layout
+
+\end_inset
+
+If you want the items as a list you have to add a blank line:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+This is my list:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+* item 1
+\end_layout
+
+\begin_layout Plain Layout
+
+* item 2
+\end_layout
+
+\begin_layout Plain Layout
+
+* item 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In many cases in the list widget you have to add this extra line after the
+ <$list> first line.
+ For example, if you want to show our output as a wikitext list with bullets
+ you have to write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$list filter="[tag[task]]">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+* <$link><<currentTiddler>></$link>
+\end_layout
+
+\begin_layout Plain Layout
+
+</$list>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you don't add the empty line after the * element the output will be wrong.
+\end_layout
+
+\begin_layout Section
+$edit-text widget
+\end_layout
+
+\begin_layout Standard
+Maybe we can simplify the adding of new task.
+ First we analyze the $edit-text widget.
+ It provide us a simple way of edit temporal data.
+ We use it for writing the text of the new task:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+New task: <$edit-text tiddler="$:/temporal" field="task"/>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All things you write to this text little rectangle applies immediately to
+ the field 
+\begin_inset Quotes eld
+\end_inset
+
+task
+\begin_inset Quotes erd
+\end_inset
+
+ of the tiddler 
+\begin_inset Quotes eld
+\end_inset
+
+$:/temporal
+\begin_inset Quotes erd
+\end_inset
+
+.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-tasks-list"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ you see the field 
+\begin_inset Quotes eld
+\end_inset
+
+task
+\begin_inset Quotes erd
+\end_inset
+
+ of this 
+\begin_inset Quotes eld
+\end_inset
+
+$:/temporal
+\begin_inset Quotes erd
+\end_inset
+
+ tiddler.
+ We use this value later to add our new task.
+ The big problem: you cannot use this widget to edit fields of the same
+ tiddler because of the lost control of it.
+\end_layout
+
+\begin_layout Section
+$button widget
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-tasks-list"
+
+\end_inset
+
+The tasks list with a text area to add new tasks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/todo_tiddler.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A button execute some code.
+ You can use a button to delete a tiddler, to add it, to create an alert
+ (an special tiddler) to add some tag to a tiddler or a list of tiddler
+ (looping with the $list widget inside the $button widget) etc.
+\end_layout
+
+\begin_layout Standard
+To create a new task we write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$button>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-createtiddler $basetitle={{$:/temporal!!task}} tags="task"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-setfield $tiddler="$:/temporal" $field="task" text=""/>
+\end_layout
+
+\begin_layout Plain Layout
+
+Create task
+\end_layout
+
+\begin_layout Plain Layout
+
+</$button>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When we click the button Tiddlywiki creates a new tiddler titled with the
+ text area and tagged with 
+\begin_inset Quotes eld
+\end_inset
+
+task
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Then delete the text area.
+\end_layout
+
+\begin_layout Standard
+The all code of our Tasks tiddler is this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$list filter="[tag[task]]">
+\end_layout
+
+\begin_layout Plain Layout
+
+<$checkbox tag="done"/> <$link><<currentTiddler>></$link><br/>
+\end_layout
+
+\begin_layout Plain Layout
+
+</$list>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+New task: <$edit-text tiddler="$:/temporal" field="task"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$button>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-createtiddler $basetitle={{$:/temporal!!task}} tags="task"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-setfield $tiddler="$:/temporal" $field="task" text=""/>
+\end_layout
+
+\begin_layout Plain Layout
+
+Create task
+\end_layout
+
+\begin_layout Plain Layout
+
+</$button>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The output is in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-tasks-list"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Combining widgets
+\end_layout
+
+\begin_layout Subsection
+Collecting information
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Combining-widgets"
+
+\end_inset
+
+Combining widgets
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/widgets_grouping.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Imagine you want to create a data tiddler with all tiddlers of your wiki
+ and the date they were created.
+ The data tiddler will 
+\begin_inset Quotes eld
+\end_inset
+
+tiddler created dates
+\begin_inset Quotes erd
+\end_inset
+
+.
+ This is the code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<$button>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-deletetiddler $tiddler="tidler created dates"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-createtiddler $basetitle="tidler created dates" type="application/x-tid
+dler-dictionary"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<$list filter="[all[]!is[system]]">
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-setfield $tiddler="tidler created dates" $index=<<currentTiddler>>
+ $value={{!!created}}/>
+\end_layout
+
+\begin_layout Plain Layout
+
+</$list>
+\end_layout
+
+\begin_layout Plain Layout
+
+Collect Dates
+\end_layout
+
+\begin_layout Plain Layout
+
+</$button>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This will loop over all elements of the list inserting the title and the
+ created field in the tiddler 
+\begin_inset Quotes eld
+\end_inset
+
+tiddler created dates
+\begin_inset Quotes erd
+\end_inset
+
+.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Combining-widgets"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ its a little diagram of the code.
+ Now, if you open this tiddler you will see the dates.
+ The first four numbers are the year, the next two the month and the next
+ two the day.
+ And after that there is the hour, minute...
+ (look at Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tiddler-created-dates"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tiddler-created-dates"
+
+\end_inset
+
+Tiddler created dates
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/tiddler_created_dates.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Change a tag
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tiddler-for-changing-tag"
+
+\end_inset
+
+Tiddler for changing a tag
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/change_tag.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You want to create a tiddler to modify a tag from its original value to
+ other value.
+ Let's look what widgets we need.
+ If you investigate inside the Tiddlywiki site you will find this information:
+\end_layout
+
+\begin_layout Itemize
+There are two messages: tm-remove-tag and tm-add-tag.
+\end_layout
+
+\begin_layout Itemize
+The messages are sent inside a $button with the action-sendmessage widget.
+\end_layout
+
+\begin_layout Itemize
+This two message needs the $fieldmangler to set to which tiddler the change
+ applies.
+\end_layout
+
+\begin_layout Itemize
+You need two $edit-text widget.
+ One for the tag to change and the other for the 
+\begin_inset Quotes eld
+\end_inset
+
+change to
+\begin_inset Quotes erd
+\end_inset
+
+ tag.
+\end_layout
+
+\begin_layout Standard
+This is the code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+| Tag to change | Change to |h
+\end_layout
+
+\begin_layout Plain Layout
+
+|<$edit-text tiddler="$:/temporal" field="tag_from"/>|<$edit-text tiddler="$:/te
+mporal" field="tag_to"/>|
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<$button>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$list filter="[tag{$:/temporal!!tag_from}]">
+\end_layout
+
+\begin_layout Plain Layout
+
+<$fieldmangler tiddler=<<currentTiddler>>>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-sendmessage $message="tm-remove-tag" $param={{$:/temporal!!tag_from}}/>
+\end_layout
+
+\begin_layout Plain Layout
+
+<$action-sendmessage $message="tm-add-tag" $param={{$:/temporal!!tag_to}}/>
+\end_layout
+
+\begin_layout Plain Layout
+
+</$fieldmangler>
+\end_layout
+
+\begin_layout Plain Layout
+
+</$list>
+\end_layout
+
+\begin_layout Plain Layout
+
+Change tag
+\end_layout
+
+\begin_layout Plain Layout
+
+</$button>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notes:
+\end_layout
+
+\begin_layout Itemize
+The three above lines are for drawing the top table with the two edit text
+ zones.
+\end_layout
+
+\begin_layout Itemize
+The action widgets are triggered by the $button widget.
+\end_layout
+
+\begin_layout Itemize
+We loop over all tiddlers tagged with tag_from: it is the 
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+[tag{$:/temporal!!tag_from}]
+\end_layout
+
+\end_inset
+
+ filter
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We insert the messages inside a $fieldmangler widget to set the tiddler
+ to modify.
+\end_layout
+
+\begin_layout Itemize
+For each tiddler of the list we send the two messages with the $action-sendmessa
+ge tiddler.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-change-tag-diagram"
+
+\end_inset
+
+The change tag diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Images/change_tag_diagram.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Writing your own widgets
 \end_layout
 
 \begin_layout Standard
