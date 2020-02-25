@@ -21,7 +21,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <hook NAME="MapStyle">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
@@ -144,7 +143,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="&lt;&lt;__parameter__&gt;&gt;" STYLE_REF="lista peque&#xf1;a" ID="ID_1612265898" CREATED="1573204948179" MODIFIED="1573205624241"><richcontent TYPE="DETAILS">
@@ -159,7 +157,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="$(variable)$" STYLE_REF="lista peque&#xf1;a" ID="ID_494208543" CREATED="1573205894871" MODIFIED="1573206399835"><richcontent TYPE="DETAILS">
@@ -174,10 +171,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="$parameter)" STYLE_REF="lista peque&#xf1;a" ID="ID_1418837999" CREATED="1573205916022" MODIFIED="1573206403912"><richcontent TYPE="DETAILS">
+<node TEXT="$parameter$" STYLE_REF="lista peque&#xf1;a" ID="ID_1418837999" CREATED="1573205916022" MODIFIED="1579179856100"><richcontent TYPE="DETAILS">
 
 <html>
   <head>
@@ -189,7 +185,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="\define mymacro(myparameter)&#xa;  myvariable access: &lt;&lt;myvariable&gt;&gt;&lt;br&gt;&#xa;  myparameter access: &lt;&lt;__myparameter__&gt;&gt;&lt;br&gt;&#xa;  myparameter substitution $myparameter$.&lt;br&gt;&#xa;  myvariable substitution $(myvariable)$.&#xa;\end&#xa;&#xa;&lt;$set name=&quot;myvariable&quot; value=&quot;33&quot;&gt;&#xa;&lt;&lt;mymacro 100&gt;&gt;&#xa;&lt;/$set&gt;" STYLE_REF="terminal" ID="ID_1885970917" CREATED="1573205090715" MODIFIED="1573206094325" HGAP_QUANTITY="18.499999865889553 pt" VSHIFT_QUANTITY="17.99999946355821 pt"><richcontent TYPE="DETAILS">
@@ -219,7 +214,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>

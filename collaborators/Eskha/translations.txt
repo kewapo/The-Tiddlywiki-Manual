@@ -1,0 +1,81 @@
+Hi Louis,
+
+First, I thank you for your amazing work on The-Book.
+
+Perhaps some elements for chapter 12:
+
+For "12.1 Key points"
+
+TiddlyWiki current language can be set in the Basics sub-panel  of info panel in the ControlPanel.
+New languages can be installed with the Plugin Manager of the ControlPanel.
+
+
+For "12.2 Languages internals"
+
+The value of the current language is stored into the system tiddler "$:/language".
+
+Tiddlywiki uses ISO language code, for instance "en-GB" for British English.
+
+
+For "12.5 Writing international wikis and plugins"
+
+Translating information displayed in the plugin manager (ControlPanel).
+
+For each plugin, the plugin manager displays some information in different tabs: readme, usage, contents, ...
+
+This information can be displayed in the wiki current language.
+
+For instance, to translate the "readme" part for "<author_name>/<plugin_name>" plugin,  you need to create the translation
+in the following tiddler: $:/plugins/<author_name>/<plugin_name>/<lang_code>/readme
+Where <lang_code> is the ISO language name, for instance "fr-FR" for french from France.
+Tip: you can check the language code of installed languages in the Plugins / languages panel of the ControlPanel.
+
+Tiddlywiki will automatically display the translated information corresponding to selected "Current language" if this information exists.
+
+
+Translating messages in you plugin
+
+This section describes an option to translate messages in your plugin.
+
+Step 1
+
+Create the following tiddler and replace the text in bracket by your name, plugin name and for <an-pn> by a short prefix representing
+your <author_name>-<plugin_name>.
+
+title: $:/ plugins/<author_name>/<plugin_name>
+tags: $:/tags/Macro
+text:
+\define <an-pn>-base() $:/ plugins/<author_name>/<plugin_name>/lang
+
+\define <an-pn>-lingo(txt)
+<$transclude tiddler="$(<an-pn>-base)$/$(languageTitle)$/$txt$" mode="inline">
+<$transclude tiddler="$(<an-pn>-base)$/$txt$" mode="inline">
+Missing tiddler $(<an-pn>-base)$/$txt$
+</$transclude>
+</$transclude>
+\end
+
+
+Step 2
+
+Store each text message in english in tiddlers named with a short message description according to this pattern:
+
+$:/ plugins/<author_name>/<plugin_name>/lang/<short message description>
+
+
+Step 3
+
+Store translated texts in tiddlers named:
+
+$:/ plugins/<author_name>/<plugin_name>/lang/<lang_code>/<short message description>
+
+
+Step 4
+
+When you need do display a text message, use the macro defined in step 1 like this:
+
+<<<an-pn>-lingo "<short message description>" >>
+
+Best regards,
+
+Eskha
